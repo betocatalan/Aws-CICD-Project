@@ -29,7 +29,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pytest  # Ejecutar pruebas con pytest
+          pytest  # Ejecutar pruebas pytest
 
       - name: Build and Push in Docker Hub
         uses: mr-smithers-excellent/docker-build-push@v4
