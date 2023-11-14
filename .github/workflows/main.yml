@@ -48,9 +48,9 @@ jobs:
           context: .
           push: true
           tags: ${{ env.IMAGE_NAME }}
-          # Necesitas configurar las credenciales de Docker
+          # Usar el secreto de Docker Hub
           username: ${{ env.DOCKER_USERNAME }}
-          password: ${{ env.DOCKER_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}  # Usar el secreto del token de Docker Hub
 
       - name: Connect to SSH and pull Docker image
         uses: appleboy/ssh-action@master
